@@ -1,0 +1,28 @@
+project_dir: 'projects'
+project_name: Natural_History_Museum
+video_path: 'movies/Natural_History_Museum.mp4'
+plot_filename: 'plot.txt'
+video_retrieval:
+  video_url: 'https://www.youtube.com/watch?v=fdcEKPS6tOQ'
+plot_retrieval:
+  video_id: 
+subplot:
+  split_char:
+voice:
+  model_id: 'tts_models/multilingual/multi-dataset/xtts_v2'
+  device: cpu
+  reference_voice_path: 'voices/sample_voice.wav'
+  tts_language: en
+  n_audios: 1
+frame_sampling:
+  n_frames: 500
+frame_ranking:
+  model_id: 'clip-ViT-B-32'
+  device: cpu
+  n_retrieved_images: 1
+  similarity_batch_size: 128
+clip:
+  min_clip_len: 3
+audio_clip:
+  clip_volume: 0.1
+  voice_volume: 1.0
